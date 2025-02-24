@@ -1,50 +1,62 @@
-index.html
-<link rel="stylesheet" href="styles.css">
-<h1 id="title">Should the Kenyan Government Remove import tax on super cars?</h1>
- 
- <p id="description"> Thank you for taking time to take part in this survey </p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form - Super Cars</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 id="title">Should the Kenyan Government Remove Import Tax on Super Cars?</h1>
+    <p id="description">Thank you for taking time to take part in this survey</p>
 
- <form id="survey-form">
-   <div>
-   <label id="name-label">Enter Name<input id="name" type="text" required placeholder="name"/></label>
-   </div>
-  <div>
-    <label id="email-label"> Enter Email <input id="email" type="email" required placeholder="email"/></label>
-    </div>
-    <div>
-  <label id="number-label"> Enter Age <input id="number" type="number" min="3" max="50" placeholder="number"/></label>
-  <div>
-    <label id=|"select-label">Whats your favorite super car?<label/>
-  <select id="dropdown">
-    <option>Bugatti</option>
-    <option>Lamborghini</option>
-    <option>McLaren</option>
-    </select>
-    <div class="input-element">
-  <label> Have you seen a super car before?</label>
-  </div>
-   <div>
-  <label> <input type="radio" name="car" value="radio"/>Yes</label>
-   </div>
-   <div>
-   <label> <input type="radio" name="car" value="radio">No</label>
-   </div>
-  <div class="input-element"> 
-    <label>Which of these do you know?</label>
-  </div>
-   <div
-  <label> <input type="checkbox" value="know" > Mercedees</label>
-  </div>
-  <div
-   <label> <input type="checkbox" value="know">Subaru</label>
-   </div>
-    <div class="input-element">
-      <label> Additional comments</label>
-     
-    <textarea type="text"></textarea>
-    </div>
-   <button  type="submit" id="submit" />
-   submit
-   </button>
-  
-   <form>
+    <form id="survey-form">
+        <div class="form-group">
+            <label id="name-label" for="name">Enter Name:</label>
+            <input id="name" type="text" name="name" required placeholder="Enter your name">
+        </div>
+
+        <div class="form-group">
+            <label id="email-label" for="email">Enter Email:</label>
+            <input id="email" type="email" name="email" required placeholder="Enter your email">
+        </div>
+
+        <div class="form-group">
+            <label id="number-label" for="number">Enter Age:</label>
+            <input id="number" type="number" name="age" min="3" max="50" placeholder="Enter your age">
+        </div>
+
+        <div class="form-group">
+            <label id="select-label" for="dropdown">What's your favorite super car?</label>
+            <select id="dropdown" name="favorite-car">
+                <option value="bugatti">Bugatti</option>
+                <option value="lamborghini">Lamborghini</option>
+                <option value="mclaren">McLaren</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Have you seen a super car before?</label>
+            <div class="radio-group">
+                <label><input type="radio" name="seen-car" value="yes" id="yes"> Yes</label>
+                <label><input type="radio" name="seen-car" value="no" id="no"> No</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Which of these do you know?</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="known-cars" value="mercedes" id="mercedes"> Mercedes</label>
+                <label><input type="checkbox" name="known-cars" value="subaru" id="subaru"> Subaru</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="comments">Additional comments:</label>
+            <textarea id="comments" name="comments" placeholder="Enter your comments here..." rows="4"></textarea>
+        </div>
+
+        <button type="submit" id="submit">Submit</button>
+    </form>
+</body>
+</html>
